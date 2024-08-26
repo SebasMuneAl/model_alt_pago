@@ -6,7 +6,7 @@ from joblib import dump
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
-from src.data_preprocessing import DataPreprocessor
+from src.data_prepro import DataPreprocessor
 
 with open('config.json') as f:
     config_dict = json.load(f)

@@ -4,7 +4,7 @@ import datetime
 import json
 from joblib import load
 import pandas as pd
-from src.data_preprocessing import DataPreprocessor
+from src.data_prepro import DataPreprocessor
 
 with open('config.json') as f:
     config_dict = json.load(f)

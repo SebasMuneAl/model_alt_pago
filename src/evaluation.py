@@ -81,3 +81,4 @@ file_prediction = df_eval[['ID', 'var_rpta_alt', 'prob_uno']]
 name_f = f"predict_{datetime.datetime.now().strftime('%Y%m%d_%H%m%S')}.csv"
 logger.info(f"Guardando predicciones en carpeta: {os.path.join(path,'predict',name_f)}")
 file_prediction.to_csv(os.path.join(path,'predict',name_f), encoding='utf-8', index=False)
+logger.info('Nuevo update al desarrollo super cool')

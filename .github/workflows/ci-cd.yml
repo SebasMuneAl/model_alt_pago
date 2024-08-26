@@ -1,0 +1,46 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          # Aquí ejecuta tus tests
+          pytest tests/
+
+      - name: Build Docker image
+        run: |
+          docker build -t model_alt_pago .
+
+      - name: Run batch process in Docker container
+        run: |
+          docker run --rm model_alt_pago
+
+      - name: Check batch results
+        run: |
+        #Buscamos el file mas reciente (de momento funciona asi. Mas optimo con var entorno)
+          LATEST_FILE=$(ls -t data/predict/*.csv | head -n 1)
+          cat "$LATEST_FILE"

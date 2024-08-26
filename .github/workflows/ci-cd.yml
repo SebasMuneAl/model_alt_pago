@@ -30,9 +30,9 @@ jobs:
         run: |
           docker build -t model_alt_pago .
 
-      - name: Run batch process in Docker container
+      - name: Evaluation in Docker
         run: |
-          docker run --rm model_alt_pago
+          docker run --rm -v ${{ github.workspace }}/data/predict:/data/predict model_alt_pago
 
       - name: Check batch results
         run: |

@@ -1,0 +1,145 @@
+{
+    "model": {
+        "data_files":{
+            "info_pagos_file" :"prueba_op_maestra_cuotas_pagos_mes_hist_enmascarado_completa.csv",
+            "info_var_rpta_file" : "prueba_op_base_pivot_var_rpta_alt_enmascarado_trtest.csv",
+            "info_mod_cbza_file" : "prueba_op_probabilidad_oblig_base_hist_enmascarado_completa.csv"
+        },
+        "target": "var_rpta_alt",
+        "cols_select": [
+            "num_oblig_enmascarado",
+            "fecha_corte_rep",
+            "nit_enmascarado",
+            "marca_pago",
+            "pago_total",
+            "valor_cuota_mes",
+            "producto",
+            "segmento",
+            "pago_total_lag_1",
+            "prob_propension_lag_1",
+            "prob_alrt_temprana_lag_1",
+            "prob_auto_cura_lag_1",
+            "pago_total_lag_2",
+            "prob_propension_lag_2",
+            "prob_alrt_temprana_lag_2",
+            "prob_auto_cura_lag_2",
+            "prob_propension_bajo",
+            "prob_alrt_temprana_bajo",
+            "prob_auto_cura_bajo"
+        ],
+        "cols_model" :[
+            "producto_CARTERA MICROCREDITO",
+            "producto_CARTERA ORDINARIA",
+            "producto_CREDIPAGO",
+            "producto_HIPOTECARIO VIVIENDA",
+            "producto_LEASING",
+            "producto_LEASING HABITACIONAL",
+            "producto_LIBRANZA",
+            "producto_LIBRE INVERSION",
+            "producto_OTROS HIPOTECARIO",
+            "producto_ROTATIVOS",
+            "producto_SOBREGIRO",
+            "producto_TARJETA DE CREDITO",
+            "producto_TESORERIA",
+            "producto_Titularizada",
+            "segmento_EMPRESARIAL",
+            "segmento_MICROPYME",
+            "segmento_PERSONAL",
+            "segmento_PERSONAL PLUS",
+            "segmento_PREFERENCIAL",
+            "segmento_PYMES",
+            "segmento_SOCIAL",
+            "pago_total_lag_1",
+            "pago_total_lag_2",
+            "prob_propension_lag_1",
+            "prob_alrt_temprana_lag_1",
+            "prob_auto_cura_lag_1",
+            "prob_propension_lag_2",
+            "prob_alrt_temprana_lag_2",
+            "prob_auto_cura_lag_2",
+            "prob_propension_bajo",
+            "prob_alrt_temprana_bajo",
+            "prob_auto_cura_bajo"
+        ],
+        "cols_cohe": [
+            "producto",
+            "segmento"
+        ],
+        "cols_std": [
+            "pago_total_lag_1",
+            "pago_total_lag_2"
+        ]
+    },
+    "evaluation":{
+        "data_files":{
+            "info_pagos_file" :"prueba_op_maestra_cuotas_pagos_mes_hist_enmascarado_completa.csv",
+            "info_eval_file" : "prueba_op_base_pivot_var_rpta_alt_enmascarado_oot.csv",
+            "info_mod_cbza_file" : "prueba_op_probabilidad_oblig_base_hist_enmascarado_completa.csv"
+        },
+        "fecha_ft": "202312",
+        "cols_select": [
+            "num_oblig_enmascarado",
+            "fecha_corte_rep",
+            "nit_enmascarado",
+            "marca_pago",
+            "pago_total",
+            "valor_cuota_mes",
+            "producto",
+            "segmento",
+            "pago_total_lag_1",
+            "prob_propension_lag_1",
+            "prob_alrt_temprana_lag_1",
+            "prob_auto_cura_lag_1",
+            "pago_total_lag_2",
+            "prob_propension_lag_2",
+            "prob_alrt_temprana_lag_2",
+            "prob_auto_cura_lag_2",
+            "prob_propension_bajo",
+            "prob_alrt_temprana_bajo",
+            "prob_auto_cura_bajo"
+        ],
+        "cols_model" :[
+            "producto_CARTERA MICROCREDITO",
+            "producto_CARTERA ORDINARIA",
+            "producto_CREDIPAGO",
+            "producto_HIPOTECARIO VIVIENDA",
+            "producto_LEASING",
+            "producto_LEASING HABITACIONAL",
+            "producto_LIBRANZA",
+            "producto_LIBRE INVERSION",
+            "producto_OTROS HIPOTECARIO",
+            "producto_ROTATIVOS",
+            "producto_SOBREGIRO",
+            "producto_TARJETA DE CREDITO",
+            "producto_TESORERIA",
+            "producto_Titularizada",
+            "segmento_EMPRESARIAL",
+            "segmento_MICROPYME",
+            "segmento_PERSONAL",
+            "segmento_PERSONAL PLUS",
+            "segmento_PREFERENCIAL",
+            "segmento_PYMES",
+            "segmento_SOCIAL",
+            "pago_total_lag_1",
+            "pago_total_lag_2",
+            "prob_propension_lag_1",
+            "prob_alrt_temprana_lag_1",
+            "prob_auto_cura_lag_1",
+            "prob_propension_lag_2",
+            "prob_alrt_temprana_lag_2",
+            "prob_auto_cura_lag_2",
+            "prob_propension_bajo",
+            "prob_alrt_temprana_bajo",
+            "prob_auto_cura_bajo"
+        ],
+        "cols_cohe": [
+            "producto",
+            "segmento"
+        ],
+        "cols_std": [
+            "pago_total_lag_1",
+            "pago_total_lag_2"
+        ]
+    }
+
+}

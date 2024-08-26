@@ -30,8 +30,8 @@ class DataPreprocessor:
         return data
     
     def features(self, X: pd.DataFrame, Y: pd.DataFrame) -> pd.DataFrame:
-        df_pagos = X
-        df_cbza = Y
+        df_pagos = X.copy()
+        df_cbza = Y.copy()
         #Fecha Aniomes
         df_pagos['fecha_corte_rep'] = df_pagos['fecha_corte'].astype('str').str.slice(0, 6).astype('int64')
         df_merge = pd.merge(

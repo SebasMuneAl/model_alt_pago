@@ -41,6 +41,6 @@ jobs:
 
       - name: Check batch results
         run: |
-        #Buscamos el file mas reciente (de momento funciona asi. Mas optimo con var entorno)
+          #Buscamos el file mas reciente (de momento funciona asi. Mas optimo con var entorno)
           LATEST_FILE=$(ls -t data/predict/*.csv | head -n 1)
           cat "$LATEST_FILE"

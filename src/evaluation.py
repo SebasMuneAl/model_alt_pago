@@ -26,7 +26,7 @@ try:
     df_pagos = pd.read_csv(os.path.join(path,info_pagos_file ))
     df_cbza = pd.read_csv(os.path.join(path,info_mod_cbza_file ))
     df_eval = pd.read_csv(os.path.join(path,info_var_rpta_file ))
-except as e:
+except Exception as e:
     print(f'Error en lectura datos \nError: {e}')
 
 prepro = DataPreprocessor()
@@ -45,6 +45,8 @@ try:
         left_on = 'num_oblig_enmascarado',
         right_on = 'num_oblig_enmascarado'
     )
+except Exception as e:
+    print(f'ERROR: {e}')
 
 print('Seleccionando variables y aplicando modelo')
 #Cargue modelo

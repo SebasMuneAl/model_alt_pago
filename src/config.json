@@ -72,9 +72,9 @@
     },
     "evaluation":{
         "data_files":{
-            "info_pagos_file" :"prueba_op_maestra_cuotas_pagos_mes_hist_enmascarado_completa.csv",
-            "info_eval_file" : "prueba_op_base_pivot_var_rpta_alt_enmascarado_oot.csv",
-            "info_mod_cbza_file" : "prueba_op_probabilidad_oblig_base_hist_enmascarado_completa.csv"
+            "info_pagos_file" :"info_pagos_filt.csv",
+            "info_eval_file" : "info_cli_filt.csv",
+            "info_mod_cbza_file" : "info_cbza_filt.csv"
         },
         "fecha_ft": "202312",
         "cols_select": [
@@ -132,7 +132,7 @@
             "prob_alrt_temprana_bajo",
             "prob_auto_cura_bajo"
         ],
-        "cols_cohe": [
+        "cols_ohe": [
             "producto",
             "segmento"
         ],

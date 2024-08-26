@@ -2,6 +2,7 @@ import pickle
 import os
 import datetime
 import json
+from joblib import load
 import pandas as pd
 from src.data_preprocessing import DataPreprocessor
 
@@ -47,8 +48,7 @@ try:
 
 print('Seleccionando variables y aplicando modelo')
 #Cargue modelo
-with open('models/model_op.pkl', 'rb') as f:
-    model = pickle.load(f)
+model = joblib.load('models/model_op_compres.pkl')
 
 x_eval = df_eval[cols_model]
 y_pred = model.predict(x_eval)

@@ -2,6 +2,7 @@ import os
 import json
 import pickle
 import pandas as pd
+from joblib import dump
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
@@ -53,5 +54,4 @@ best_param = {'max_depth': 15, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n
 model = RandomForestClassifier(**best_param)
 model = model.fit(X_train, y_train)
 
-with open('../models/model_op.pkl', 'wb') as f:
-    pickle.dump(model, f)model
+dump(model, 'models/model_op_compres.pkl', compress=('xz', 3))
